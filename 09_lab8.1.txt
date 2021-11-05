@@ -1,0 +1,53 @@
+package com.company;
+import java.util.Scanner;
+
+class worker {
+    float salary = 70000;
+    double workersalary;
+
+    void printDetails()
+    {
+        System.out.println("workerSalary is : " + salary);
+    }
+
+}
+
+class Permanent_worker extends worker
+{
+        double hike = 0.5;
+        void printDetails()
+        {
+        System.out.println("workerSalary is : " + salary);
+        }
+
+        void generate_salary()
+        {
+        System.out.println("Toal salary : "+(salary + hike));
+        }
+}
+
+class Temporary_worker extends worker
+        {
+        double hike = 0.59;
+        void printDetails()
+        {
+                System.out.println("workerSalary is : " + salary);
+        }
+
+        void generate_salary()
+        {
+            System.out.println("Total salary : "+(salary + hike));
+        }
+
+        }
+
+public class Main{
+    public static void main(String args[]){
+        Permanent_worker p = new Permanent_worker();
+        Temporary_worker t = new Temporary_worker();
+        p.printDetails();
+        p.generate_salary();
+        t.printDetails();
+        t.generate_salary();
+        }
+}
